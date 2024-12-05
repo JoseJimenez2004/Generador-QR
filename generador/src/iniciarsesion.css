@@ -1,125 +1,239 @@
-/* Estilos para el contenedor principal */
-.login-main-content {
+/* Estilos para la página de inicio de sesión */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e8f0fe;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 60px; /* Para dar espacio por el header fijo */
-  gap: 50px;
+  height: 100vh;
 }
 
-/* Sección del QR */
+/* Contenedor principal */
+.login-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Sección QR */
 .qr-section {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.qr-icon-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  padding: 20px;
 }
 
 .qr-image {
-  width: 300px;  /* Tamaño del QR */
-  height: 300px;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.qr-icon {
-  font-size: 50px;  /* Tamaño del ícono */
-  color: #0ec0c1; /* Color del ícono */
-}
-
-/* Sección del formulario */
+/* Sección de formulario */
 .form-section {
-  flex: 1;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1.5;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Formulario */
 .form-container {
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 
+/* Estilo de los grupos de entrada */
 .input-group {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
 }
 
 .input-icon-container {
   display: flex;
   align-items: center;
-  gap: 10px;
+  border: 2px solid #ccc;
+  padding: 12px;
+  border-radius: 10px;
+  transition: border-color 0.3s ease;
 }
 
 .input-icon {
   font-size: 18px;
-  color: #0ec0c1; /* Color de los iconos */
+  color: #0ec0c1;
+  margin-right: 12px;
 }
 
-input[type="email"],
-input[type="password"] {
-  padding: 10px;
+input {
+  border: none;
+  outline: none;
+  padding: 12px;
   font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
   width: 100%;
+  color: #555;
 }
 
+input:focus {
+  background-color: #f3f3f3;
+  border-color: #0ec0c1;
+}
+
+/* Estilo del botón de envío */
 .submit-button {
-  padding: 10px;
-  font-size: 16px;
   background-color: #0ec0c1;
   color: white;
+  padding: 12px;
+  font-size: 16px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
 }
 
 .submit-button:hover {
-  background-color: #08a7a6;
+  background-color: #0ec0c1;
 }
 
+.submit-button:active {
+  background-color: #0ec0c1;
+}
+
+.submit-icon {
+  margin-right: 10px;
+}
+
+/* Estilo del enlace de registro */
 .register-link {
-  margin-top: 10px;
   text-align: center;
+  margin-top: 30px;
+}
+
+.register-link p {
+  font-size: 14px;
+  color: #777;
 }
 
 .register-link a {
-  color: #0ec0c1;
+  color: #007bff;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .register-link a:hover {
   text-decoration: underline;
 }
-/* Sección del QR */
-.qr-section {
-  flex: 1;
+
+/* iniciasesion.css */
+
+/* Contenedor de la alerta */
+.alert {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Estilo para la alerta de éxito (verde) */
+.alert.success {
+  background-color: #4CAF50;
+  color: white;
+  border: 2px solid #388E3C;
+}
+
+/* Estilo para la alerta de error (roja) */
+.alert.error {
+  background-color: #f44336;
+  color: white;
+  border: 2px solid #d32f2f;
+}
+
+/* Restante de los estilos del formulario y los campos */
+.login-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
-.qr-icon-container {
+.form-section {
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-icon-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
 }
 
-.qr-image {
-  width: 300px;  /* Tamaño del QR */
-  height: 300px;
+.input-icon {
+  margin-right: 10px;
 }
 
-.qr-icon {
-  font-size: 50px;  /* Tamaño del ícono */
-  color: #0ec0c1; /* Color del ícono */
+input[type="text"],
+input[type="password"] {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 10px;
 }

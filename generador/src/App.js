@@ -1,8 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'; // Importar Router y las rutas
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-import logo from './logo.svg'; // Tu logo
-import IniciarSesion from './IniciarSesion'; // Importamos la página de inicio de sesión
+import logo from './logo.svg';
+import IniciarSesion from './IniciarSesion';
+import CrudFormulario from './crudFormulario';
 
 function App() {
   return (
@@ -10,29 +11,18 @@ function App() {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          
-          {/* Menú de navegación */}
+          <p>Edit <code>src/App.js</code> and save to reload.</p>
+
           <div className="button-container">
             <Link to="/iniciar-sesion">
               <button className="login-button">Iniciar sesión</button>
             </Link>
-            <button className="register-button">Registrarse</button>
+            <Link to="/crud">
+              <button className="crud-button">Formulario CRUD</button>
+            </Link>
           </div>
-          
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
         </header>
 
-        {/* Definición de rutas */}
         <Routes>
           <Route path="/" element={
             <div>
@@ -41,6 +31,7 @@ function App() {
             </div>
           } />
           <Route path="/iniciar-sesion" element={<IniciarSesion />} />
+          <Route path="/crud" element={<CrudFormulario />} />
         </Routes>
       </div>
     </Router>
