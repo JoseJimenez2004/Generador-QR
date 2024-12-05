@@ -1,17 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './index.css';  // Importamos los estilos desde el archivo CSS
+import { FaSignInAlt, FaUserPlus } from 'react-icons/fa';  // Asegúrate de tener react-icons instalado
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <div className="menu-container">
+      <div className="logo">QRify<span className="highlight">Media</span></div> {/* Logo con letras destacadas */}
+      <div className="button-container">
+        <button className="login-button">
+          <FaSignInAlt className="icon" /> Iniciar sesión
+        </button>
+        <button className="register-button">
+          <FaUserPlus className="icon" /> Registrarse
+        </button>
+      </div>
+    </div>
+    <div style={{ textAlign: 'center', marginTop: '20px' }}>
+      <h2>Bienvenidos a mi generador de QR</h2>
+    </div>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

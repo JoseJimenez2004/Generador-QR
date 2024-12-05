@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +11,69 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Estilos de la barra de menú */
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px; /* Alto de la barra */
+  width: 100%; /* Ancho completo */
+  background-color: #fff; /* Fondo blanco */
+  display: flex;
+  justify-content: space-between; /* Logo a la izquierda, botones a la derecha */
+  align-items: center; /* Centrar los elementos verticalmente */
+  padding: 0 20px; /* Espaciado lateral */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil en la barra */
+  z-index: 1000; /* Para asegurarse de que esté por encima de otros elementos */
+}
+
+/* Estilos del logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #0ec0c1; /* Color verde para destacar "Media" */
+}
+
+/* Contenedor de los botones */
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Alinea los botones a la derecha */
+  gap: 20px; /* Espaciado entre los botones */
+}
+
+/* Estilos de los botones */
+.login-button, .register-button {
+  width: 150px; /* Ancho original de los botones */
+  height: 40px; /* Altura original de los botones */
+  font-size: 16px; /* Tamaño de fuente original */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Estilos específicos para el botón de "Iniciar sesión" */
+.login-button {
+  background-color: transparent;
+  color: #0ec0c1; /* Color de texto */
+  border: 2px solid #0ec0c1; /* Borde color #562155 */
+}
+
+/* Estilos específicos para el botón de "Registrarse" */
+.register-button {
+  background-color: #0ec0c1; /* Fondo color #562155 */
+  color: white;
+  margin-right: 20px; /* Separación del borde derecho */
+}
+
+/* Estilos para los íconos dentro de los botones */
+.icon {
+  margin-right: 8px; /* Espaciado entre el ícono y el texto */
 }
