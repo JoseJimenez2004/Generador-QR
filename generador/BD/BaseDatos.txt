@@ -1,0 +1,13 @@
+CREATE DATABASE QR;
+
+USE QR;
+
+-- Tabla de usuarios
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,  -- Identificador único para cada usuario
+    correo VARCHAR(255) NOT NULL,        -- Correo del usuario, no puede ser nulo
+    contraseña VARCHAR(255) NOT NULL,    -- Contraseña del usuario, no puede ser nula
+    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,  -- Fecha y hora en que se registró el usuario
+    UNIQUE(correo)  -- Asegura que no haya correos duplicados
+);
+
