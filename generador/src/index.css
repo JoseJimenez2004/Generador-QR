@@ -6,12 +6,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-size: cover; /* Para que el SVG cubra todo el fondo */
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 /* Estilos de la barra de menú */
@@ -37,7 +31,7 @@ code {
 }
 
 .highlight {
-  color: #4CAF50;
+  color: #0ec0c1;  /* Color destacado */
 }
 
 /* Contenedor de los botones */
@@ -62,12 +56,12 @@ code {
 
 .login-button {
   background-color: transparent;
-  color: #562155;
-  border: 2px solid #562155;
+  color: #0ec0c1;
+  border: 2px solid #0ec0c1;
 }
 
 .register-button {
-  background-color: #562155;
+  background-color: #0ec0c1;
   color: white;
   margin-right: 20px;
 }
@@ -75,4 +69,73 @@ code {
 /* Estilos para los íconos dentro de los botones */
 .icon {
   margin-right: 8px;
+}
+
+/* Estilo para el texto grande */
+.qr-info {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.qr-info h2 {
+  font-size: 48px;  /* Aumentamos el tamaño de la fuente */
+}
+
+.qr-info .highlight {
+  color: #0ec0c1;
+}
+
+/* Estilo para las características con iconos */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+}
+
+.feature-item p {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+/* Palomitas de color azul */
+.check-icon {
+  color: #007bff;  /* Azul para las palomitas */
+}
+
+/* Estilo para el botón de llamada a la acción */
+.cta-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  height: 10vh;           /* Usa el 100% de la altura de la pantalla */
+  margin-top: 20px;        /* Un poco de espacio arriba */
+}
+
+.cta-button {
+  padding: 15px 40px;  /* Tamaño del botón */
+  font-size: 20px;      /* Tamaño de la fuente */
+  background-color: #0ec0c1;
+  color: white;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-button:hover {
+  background-color: #0c9a9b;
+}
+
+
+/* Estilo para el icono dentro del botón */
+.cta-icon {
+  margin-right: 10px;
 }
